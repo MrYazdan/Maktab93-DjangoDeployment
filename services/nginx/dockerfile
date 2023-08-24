@@ -1,0 +1,8 @@
+FROM nginx:alpine
+
+USER root
+
+RUN apk add --no-cache openssl bash
+RUN chmod +x ./entrypoint.sh
+
+CMD ["./entrypoint.sh"]
